@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>CSS动画-loading</title>
+        <style>
+            .ddr{
+                display: flex;
+                justify-content: space-between;
+                width: 60px;
+                margin: 200px auto;
+                animation: loading 1s linear infinite;
+            }
+
+            .ddr > div{
+                width: 10px;
+                height: 100px;
+                background: green;
+            }
+
+            .ddr1{
+                animation-delay: -0.9s
+            }
+            .ddr2{
+                animation-delay: -0.8s
+            }
+            .ddr3{
+                animation-delay: -0.7s
+            }
+            .ddr4{
+                animation-delay: -0.6s
+            }
+
+            @keyframes loading{
+                0%, 40%, 100%{
+                    transform: scaleY(0.5);
+                }
+                20%{
+                    transform: scaleY(1);
+                }
+            }
+            
+        </style>
+    </header>
+    <body>
+        <div class="ddr">
+            <div class="ddr ddr1"></div>
+            <div class="ddr ddr2"></div>
+            <div class="ddr ddr3"></div>
+            <div class="ddr ddr4"></div>
+        </div>
+    </body>
+</html>

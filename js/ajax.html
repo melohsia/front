@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>BFC应用</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .demo{
+                display: flow-root;
+            }
+            .demo div {
+                width: 40px;
+                height: 40px;
+            }
+            .demo1 {
+                margin: 10px auto;
+                background: pink;
+            }
+            .demo2 {
+                overflow: hidden;
+                margin: 20px auto;
+                background: blue;
+            }
+        </style>
+    </header>
+    <body>
+        <div class="demo">
+            <div class="demo1" onclick="handleClick(1)"></div>
+        </div>
+        <div class="demo">
+            <div class="demo2" onclick="handleClick(2)"></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        const handleClick = (index) => {
+            let xhr = new XMLHttpRequest();
+            xhr.open('get', 'http://127.0.0.1:3001/');
+            xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded; charset=UTF-8');
+            xhr.send();
+            xhr.onload = () => {
+                let resText=JSON.parse(xhr.responseText);
+                console.log('resText', resText)
+                document.getElementsByClassName('demo'+index)[0].innerHTML=resText.msgCode;
+            }
+        }
+    </script>
+</html>

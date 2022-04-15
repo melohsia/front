@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>BFC应用</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .demo1 {
+                width: 100px;
+                height: 100px;
+                float: left;
+                background: pink
+            }
+            .demo2 {
+                width: 200px;
+                height: 200px;
+                background: blue;
+                overflow: hidden;
+            }
+        </style>
+    </header>
+    <body>
+        <div class="demo">
+            <div class="demo1">我是一个左侧浮动元素</div>
+            <div class="demo2">我是一个没有设置浮动, 也没有触发BFC的元素</div>
+        </div>
+    </body>
+</html>

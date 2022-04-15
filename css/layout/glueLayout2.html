@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>粘连布局</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            html,
+            body {
+                height: 100%;
+            }
+            #wrap{
+                min-height: 100%;
+                background-color: pink;
+                text-align: center;
+                margin-bottom: -50px;
+                overflow: hidden;
+            }
+            #footer{
+                height: 50px;
+                width: 100%;
+                line-height: 50px;
+                text-align: center;
+                background-color: deeppink;
+            }
+        </style>
+    </header>
+    <body>
+        <div id="wrap">
+            <div class="main">
+              main <br />
+              main <br />
+            </div>
+          </div>
+        <div id="footer">footer</div>
+    </body>
+</html>

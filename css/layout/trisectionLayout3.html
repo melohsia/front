@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>三栏布局</title>
+        <style>
+            .container {
+                display: flex;
+            }
+            .left {
+                /* float: left; */
+                width: 200px;
+                height: 400px;
+                background: red;
+                order: 0;
+            }
+            .center {
+                height: 500px;
+                background: yellow;
+                flex: 1;
+                order: 1;
+                min-width: 200px;
+            }
+            .right {
+                /* float: right; */
+                width: 200px;
+                height: 400px;
+                background: blue;
+                order: 2;
+            }
+        </style>
+    </header>
+    <body>
+        <article class="container">
+            <div class="center">
+                <div class="inner">flex布局</div>
+            </div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </body>
+</html>

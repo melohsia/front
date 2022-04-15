@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>BFC应用</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .demo{
+                border: 1px solid pink;
+                /* overflow: hidden; */
+                display: flow-root;
+            }
+            .demo p {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background: blue;
+            }
+        </style>
+    </header>
+    <body>
+        <div class="demo">
+            <p></p>
+        </div>
+    </body>
+</html>

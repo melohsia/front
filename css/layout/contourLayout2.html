@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>等高布局</title>
+        <style>
+            .container {
+                display: flex;
+            }
+            .left {
+                width: 200px;
+                background: red;
+                /* flex: 1; */
+                order: 0;
+            }
+            .center {
+                width: 100%;
+                background: yellow;
+                height: 600px;
+                flex: 1;
+                order: 1;
+                margin: 0 20px;
+            }
+            .right {
+                width: 200px;
+                min-height: 400px;
+                background: blue;
+                order: 2;
+                /* flex: 1; */
+            }
+        </style>
+    </header>
+    <body>
+        <article class="container">
+            <div class="center">
+              <h2>圣杯布局</h2>
+            </div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </body>
+</html>

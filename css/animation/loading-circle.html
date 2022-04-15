@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>CSS动画-loading</title>
+        <style>
+            .loading{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                border:2px solid white;
+                border-left-color: #1890ff;
+                border-right-color: #1890ff;
+                margin: 200px auto;
+                animation: loading 1s infinite linear;
+            }
+            @keyframes loading {
+                from {transform: rotate(0deg);}
+                to {transform: rotate(365deg);}
+            }
+        </style>
+    </header>
+    <body>
+        <div class="loading">
+        </div>
+    </body>
+</html>

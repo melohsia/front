@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>两栏布局</title>
+        <style>
+            .parent {
+                overflow: hidden;
+                zoom: 1;
+            }
+            .left {
+                float: left;
+                margin-right: 20px;
+            }
+            .right {
+                overflow: hidden;
+                zoom: 1;
+            }
+        </style>
+    </header>
+    <body>
+        <div class="parent" style="background-color: lightgrey;">
+            <div class="left" style="background-color: lightblue;">
+                <p>left</p>
+            </div>
+            <div class="right"  style="background-color: lightgreen;">
+                <p>right</p>
+                <p>right</p>
+            </div>        
+        </div>
+    </body>
+</html>

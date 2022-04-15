@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>三栏布局</title>
+        <style>
+            .container {
+                display: grid;
+                grid-auto-flow: column;
+                grid-template-columns: 200px auto 200px;
+                gap: 0 20px;
+            }
+            .left {
+                background: red;
+                order: 0;
+            }
+            .center {
+                background: yellow;
+                height: 500px;
+                order: 1;
+            }
+            .right {
+                background: blue;
+                order: 2;
+            }
+        </style>
+    </header>
+    <body>
+        <article class="container">
+            <div class="center">
+              <h2>圣杯布局</h2>
+            </div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </article>
+    </body>
+</html>
