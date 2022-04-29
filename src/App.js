@@ -1,25 +1,18 @@
-import logo from './logo.svg';
+// import Event16 from './react/event-react16';
+// import Event17 from './react/event-react17';
+import { workLoop } from './react/render/main'
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  let style = { color: 'green', border: '1px solid red', margin: '5px' }
+  workLoop();
+  let virtualDom = (
+      <div key='A' style={style}>A1
+          <div key='B1' style={style}>B11</div>
+          <div key='B2' style={style}>B22</div>
+      </div>
+  )
+  return virtualDom;
 }
 
 export default App;

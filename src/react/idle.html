@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <header></header>
+    <body></body>
+    <script>
+        const sleep = (interval) => {
+            for(let ts = Date.now(); Date.now()-ts<interval;){}
+        }
+        const works = [
+            () => {
+                console.log('task1 start');
+                sleep(20);
+                console.log('task1 end');
+            },
+            () => {
+                console.log('task2 start');
+                sleep(20);
+                console.log('task2 end');
+            },
+            () => {
+                console.log('task3 start');
+                sleep(20);
+                console.log('task3 end');
+            },
+        ]
+        const performUnitofWork = () => {
+            let work = works.shift();
+            work();
+        }
+        const workLoop = (deadline) => {
+            console.log(`本帧剩余时间是${deadline.timeRemaining()}`)
+            while(deadline.timeRemaining() > 1 && works.length > 0){
+                performUnitofWork();
+            }
+            //若无剩余时间或者任务全部完成，归还时间片
+            if(works.length){
+                requestIdleCallback(workLoop)
+            }
+        }
+        requestIdleCallback(workLoop);
+    </script>
+</html>
