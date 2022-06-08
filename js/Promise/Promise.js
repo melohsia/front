@@ -22,7 +22,7 @@ const resolvePromise = (promise2, x, resolve, reject) => {
                     called = true;
                     reject(r)
                 })
-            }else{ji
+            }else{
                 //x是一个普通对象，直接成功即可
                 resolve(x);
             }
@@ -55,7 +55,7 @@ class Promise {
                 return value.then(resolve, reject)
             }
 
-            if(this.status = PENDING) {
+            if(this.status === PENDING) {
                 this.value = value
                 this.status = FULFILLED
                 this.onResolvedCallbacks.forEach(fn => fn())

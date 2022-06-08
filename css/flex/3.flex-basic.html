@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css" media="screen">
+            .box{
+                display: flex;
+                margin:100px auto;
+                width:400px;
+                height:200px;
+            }
+            .inner{
+                width:200px;
+                height:100px;
+                /*
+                    该属性用来设置元素的宽度，其实，width也可以设置宽度。
+                    如果元素上同时设置了width和flex-basis，那么width 的值就会被flex-basis覆盖掉。
+                */
+                flex-basis:300px;
+                background:pink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="inner">
+            </div>
+        </div>
+    </body>
+</html>
